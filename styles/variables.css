@@ -4,6 +4,7 @@
 */
 :root {
   /* Переменные тёмной темы */
+  --background-color:#000028;
   --background-image: url(../images/cover-image-dark.png);
   --basic-text-color:#F1B2CE;
   --rec-visibility: visible;

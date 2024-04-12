@@ -45,9 +45,9 @@
             Или почему нам так сложно сконцентрироваться, особенно когда очень надо
           </p>
         </div>
-        <div class="rec" aria-hidden="true">
+        <span class="rec" aria-hidden="true">
           Rec
-        </div>
+        </span>
     </header>
     <main>
       <section class="why">
@@ -173,7 +173,10 @@
       </section>
     </main>
     <footer class="footer decorated-zone">
-      <h5 class="title__footer">focus</h5>
+      <h5 class="title__footer">focus</h5> 
+      <!-- невозможно устранить замечание, так как в тэге header используется h1, 
+        а другие заголовки уже используются и они под другие стили, 
+        поэтому поставил h5, так как h1 можно использовать только 1 раз-->
     </footer>
     <script src="./scripts/script.js"></script>
   </body>
