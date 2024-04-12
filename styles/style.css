@@ -19,16 +19,18 @@
   }
 
   .header {
-    height: 100vh;
     margin-inline-start: 20px;
     margin-inline-end: 20px;
     margin-block-start: 20px;
     /*border:1px solid #abd34a;*/
     /* минимальная высота указана для всех медиазапросов внизу min-height: 668px */
   }
-  
+  .header__theme-menu {
+    /*border:1px solid #d3814a;*/
+  }
+
   .header__theme-menu-list {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -37,12 +39,14 @@
 
   .title__header {
     margin-inline-start: -21px;
-    margin-block-start: 277px;
+    margin-block-start: 60px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    /*border:1px solid #4a5fd3;*/
   }
   .header__text-area {
-    margin-block-start: 115px;
+    /*margin-block-start: 114px;*/
     margin-inline-start: 2px;
+    /*border:1px solid #d34ab5;*/
   }
 
   .decorated-zone::before {
@@ -170,7 +174,6 @@
   }
 
   .footer {
-    height: 100vh;
     margin-inline-start: 20px;
     margin-inline-end: 20px;
     margin-block-start: 78px;
@@ -194,22 +197,21 @@
   }
 
   .header {
-    height: 984px;
+    /* а можно обратить внимание на мои комментарии вот тут ? вы их читаете ? */
     /* если не указать, то я не попаду в макет на указанный размер, он будет не совпадать */
+    /* минимальная высота указана для всех медиазапросов внизу min-height: 668px */
     margin-inline-start: 20px;
     margin-inline-end: 20px;
     margin-block-start: 20px;
     /*border:1px solid #abd34a;*/
-    /* минимальная высота указана для всех медиазапросов внизу min-height: 668px */
   }
   
   .header__theme-menu {
-    margin-block-start: 174.5px;
-    /*border:1px solid #5f4ad3;*/
+    align-self: center;
   }
   
   .header__theme-menu-list {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -217,14 +219,14 @@
   }
 
   .title__header {
-    margin-block-start: 178.5px;
+    /*margin-block-start: 178.5px;*/
     margin-inline-start: -20px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     /*border:1px solid #d34ab5;*/
   }
 
   .header__text-area {
-    margin-block-start: 163px;
+    /*margin-block-start: 162px;*/
     /*border:1px solid #d36f4a;*/
   }
 
@@ -350,7 +352,6 @@
   }
 
   .footer {
-    height: 984px;
     /* если не указать, то я не попаду в макет на указанный размер, он будет не совпадать */
     margin-inline-start: 20px;
     margin-inline-end: 20px;
@@ -377,7 +378,6 @@
   }
 
   .header {
-    height: 100vh;
     margin-block-start: 10px;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
@@ -385,12 +385,11 @@
   }
   
   .header__theme-menu {
-    margin-block-start: 66.5px;
-    /*border: 1px solid #ab23de;*/
+    align-self: center;
   }
   
   .header__theme-menu-list {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -399,13 +398,13 @@
 
   .title__header {
     margin-inline-start: 0px;
-    margin-block-start: 73.5px;
+    /*margin-block-start: 73.5px;*/
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     /*border: 1px solid #614ad3;*/
   }
 
   .header__text-area {
-    margin-block-start: 55px;
+    /*margin-block-start: 55px;*/
     /*border: 1px solid #d3714a;*/
   }
 
@@ -482,7 +481,6 @@
   }
 
   .footer {
-    height: 100vh;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
     margin-block-start: 50px;
@@ -567,12 +565,17 @@
 /* заголовок сайта */
 
 .header {
-  /*display: grid;
-  grid-template-rows: repeat(3, auto);*/
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  /*display: flex;
+  flex-direction: column;*/
   position: relative;
+  height: 100vh;
   min-height: 668px;
+}
+
+.header__theme-menu-list {
+  display: flex;
 }
 
 .title__header {
@@ -600,7 +603,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .decorated-zone::after {
@@ -681,6 +684,7 @@
 }
 
 .header__theme-menu-button_active {
+  pointer-events: none;
   border: 1px solid var(--button-border-color);
 }
 
@@ -707,6 +711,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   min-height: 668px;
   position: relative;
 }
