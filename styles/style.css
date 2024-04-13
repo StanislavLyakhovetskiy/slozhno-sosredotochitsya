@@ -83,7 +83,8 @@
   .what {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
     gap: 20px;
     justify-content: flex-start;
     align-items: flex-start;
@@ -95,11 +96,11 @@
 
   .what__block-title {
     grid-column-start: 1;  
-    grid-column-end: 2;
+    grid-column-end: 4;
   }
 
   .what__block-text {
-    grid-row-start: 2;
+    /*grid-row-start: 2;*/
   }
 
   .how {
@@ -207,6 +208,7 @@
   }
   
   .header__theme-menu {
+    /* это свойство не одинаково для всех, для экранов больше 1024 его нет, поэтому для двух других экранов указано явно */
     align-self: center;
   }
   
